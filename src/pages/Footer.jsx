@@ -67,21 +67,39 @@ function Footer() {
               <div className="space-y-4 text-sm opacity-90">
             <div className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-yellow-200 mt-1" />
-                <span>
-                  Block Road, Ekma, Saran, Bihar
-                  <br />
-                  Pin-code - 841208
-                </span>
+                <div>
+                  <span className="block">
+                    Block Road, Ekma, Saran, Bihar
+                    <br />
+                    Pin-code - 841208
+                  </span>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Block+Road+Ekma+Saran+Bihar+841208"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-yellow-200 hover:text-yellow-100 underline text-xs mt-1 inline-block"
+                  >
+                    Open in Google Maps
+                  </a>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <FaPhoneAlt className="text-yellow-200" />
-
-                <span>+91-8873338001</span>
+                <a 
+                  href="tel:+918873338001" 
+                  className="hover:text-yellow-200 transition-colors"
+                >
+                  +91-8873338001
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <FaEnvelope className="text-yellow-200" />
-
-                <span>vvishal2300@gmail.com</span>
+                <a 
+                  href="mailto:vvishal2300@gmail.com" 
+                  className="hover:text-yellow-200 transition-colors"
+                >
+                  vvishal2300@gmail.com
+                </a>
               </div>
             </div>
           </div>

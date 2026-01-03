@@ -1,16 +1,12 @@
 import React, { useState } from "react";
-import { FaImage, FaPalette, FaRuler, FaShoppingCart, FaStar, FaCheckCircle } from "react-icons/fa";
+import { FaImage, FaPalette, FaRuler, FaStar, FaCheckCircle } from "react-icons/fa";
 import ProductImage from '../components/ProductImage';
 import { MdPhotoSizeSelectActual, MdPhotoLibrary } from "react-icons/md";
 import { HiSparkles } from "react-icons/hi";
-import { useCart } from "../context/CartContext";
-import Toast from "../components/Toast";
 import SEO from '../components/SEO';
 
 function PhotoFrame() {
   const [selectedFrame, setSelectedFrame] = useState(null);
-  const { addToCart } = useCart();
-  const [toast, setToast] = useState(null);
 
   const frameTypes = [
     {
@@ -117,7 +113,6 @@ function PhotoFrame() {
       description="Professional photo framing services in Ekma, Saran, Bihar. Custom frames for all occasions - weddings, family photos, certificates. Premium quality framing at affordable prices."
       keywords="photo framing ekma, custom photo frames saran, picture framing bihar, photo frame service, certificate framing, wedding photo frames"
     />
-      {toast && <Toast message={toast} onClose={() => setToast(null)} />}
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-white py-20">
@@ -227,24 +222,14 @@ function PhotoFrame() {
                     <span className="text-xl font-bold text-red-900">
                       {frame.price}
                     </span>
-                    <button
-                      onClick={() => {
-                        addToCart({
-                          id: frame.id,
-                          name: frame.name,
-                          price: frame.price,
-                          img: frame.image,
-                          type: 'Photo Frame',
-                          description: frame.description,
-                          sizes: frame.sizes,
-                        });
-                        setToast('Frame added to cart!');
-                      }}
+                    <a
+                      href={`https://wa.me/918873338001?text=Hi%20I%20want%20to%20order%20${encodeURIComponent(frame.name)}%20Photo%20Frame%20(${frame.price})`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="px-4 py-2 bg-red-900 text-white rounded-lg hover:bg-red-800 transition-colors duration-200 flex items-center gap-2"
                     >
-                      <FaShoppingCart />
-                      Add to Cart
-                    </button>
+                      Order Now
+                    </a>
                   </div>
                 </div>
               </div>

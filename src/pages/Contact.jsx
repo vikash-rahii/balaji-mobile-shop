@@ -67,14 +67,24 @@ function Contact() {
                   <br />
                   Pin-code - 841208
                 </p>
-                <a
-                  href="https://wa.me/918873338001?text=Hi%20I%20need%20directions%20to%20your%20store"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 border border-primary text-primary px-4 py-2 rounded-lg hover:bg-yellow-200 hover:text-red-900 transition"
-                >
-                  <FaPaperPlane className="h-4 w-4" /> Get Directions via WhatsApp
-                </a>
+                <div className="flex flex-col gap-2">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Block+Road+Ekma+Saran+Bihar+841208"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-2 bg-red-900 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition"
+                  >
+                    <FaMapMarkerAlt className="h-4 w-4" /> Open in Google Maps
+                  </a>
+                  <a
+                    href="https://wa.me/918873338001?text=Hi%20I%20need%20directions%20to%20your%20store"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-2 border border-primary text-primary px-4 py-2 rounded-lg hover:bg-yellow-200 hover:text-red-900 transition"
+                  >
+                    <FaPaperPlane className="h-4 w-4" /> Get Directions via WhatsApp
+                  </a>
+                </div>
               </div>
               <div className="bg-white rounded-2xl shadow p-6 hover:shadow-lg transition">
                 <h3 className="flex items-center gap-2 text-lg font-semibold text-red-900">
@@ -99,10 +109,15 @@ function Contact() {
                     <FaPhoneAlt className="h-5 w-5 text-red-900" />
                   </div>
                   <h4 className="font-semibold mb-2">Call Us</h4>
-                  <p className="text-sm text-gray-600 mb-3"> +91-8873338001</p>
                   <a
                     href="tel:+918873338001"
-                    className="w-full block text-center bg-red-900 text-white px-2 py-2 rounded-lg hover:bg-primary/90 transition"
+                    className="text-sm text-gray-600 mb-3 hover:text-red-900 transition-colors"
+                  >
+                    +91-8873338001
+                  </a>
+                  <a
+                    href="tel:+918873338001"
+                    className="w-full block text-center bg-red-900 text-white px-2 py-2 rounded-lg hover:bg-primary/90 transition mt-2"
                   >
                     Call Now
                   </a>
@@ -126,10 +141,21 @@ function Contact() {
               </div>
             </div>
             <div className="bg-white rounded-2xl shadow p-8 hover:shadow-lg transition">
-              <h3 className="flex items-center gap-2 text-lg font-semibold text-red-900 mb-6">
-                <FaEnvelope className="h-6 w-6 text-red-900 inline-block mr-2" />
-                Send Us a Message
-              </h3>
+              <div className="mb-6">
+                <h3 className="flex items-center gap-2 text-lg font-semibold text-red-900 mb-4">
+                  <FaEnvelope className="h-6 w-6 text-red-900 inline-block mr-2" />
+                  Send Us a Message
+                </h3>
+                <div className="flex items-center gap-2 text-gray-600 mb-4">
+                  <FaEnvelope className="h-4 w-4" />
+                  <a 
+                    href="mailto:vvishal2300@gmail.com" 
+                    className="hover:text-red-900 transition-colors"
+                  >
+                    vvishal2300@gmail.com
+                  </a>
+                </div>
+              </div>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>

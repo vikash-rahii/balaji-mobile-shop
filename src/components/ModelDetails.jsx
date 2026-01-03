@@ -7,8 +7,6 @@ import { IoIosMic } from "react-icons/io";
 import { RxSpeakerLoud } from "react-icons/rx";
 import { LuRadioReceiver } from "react-icons/lu";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import { useCart } from "../context/CartContext";
-import Toast from "./Toast";
 import ProductImage from "./ProductImage";
 import SEO from "./SEO";
 import {
@@ -33,8 +31,6 @@ import {
 
 function ModelDetails() {
   const { brandName, modelName } = useParams();
-  const { addToCart } = useCart();
-  const [toast, setToast] = useState(null);
 
   const brandData = {
     apple,
@@ -98,7 +94,6 @@ function ModelDetails() {
       description={`Expert ${model.name} repair services in Ekma, Saran, Bihar. Screen replacement, battery replacement, camera repair, charging port, and more. Fast service with warranty.`}
       keywords={`${model.name} repair ekma, ${model.name} screen replacement, ${model.name} battery repair, ${brandName} ${model.name} service`}
     />
-      {toast && <Toast message={toast} onClose={() => setToast(null)} />}
     <div className="min-h-screen bg-gray-50 px-6 md:px-12 py-10">
       <nav className="text-sm text-gray-500 mb-6">
         <Link to="/" className="hover:text-red-900">
@@ -142,24 +137,14 @@ function ModelDetails() {
                   <p className="text-base sm:text-lg font-semibold text-gray-800"> ₹{service.price}</p>
                   <p className="line-through text-gray-500 text-xs sm:text-sm"> ₹{service.original}</p>
                 </div>
-                <button
-                  onClick={() => {
-                    addToCart({
-                      id: `repair-${service.name}-${model.id}`,
-                      name: `${service.name} - ${model.name}`,
-                      price: `₹${service.price}`,
-                      originalPrice: `₹${service.original}`,
-                      type: 'Repair Service',
-                      model: model.name,
-                      brand: brandName,
-                      service: service.name,
-                    });
-                    setToast('Service added to cart!');
-                  }}
+                <a
+                  href={`https://wa.me/918873338001?text=Hi%20I%20need%20${encodeURIComponent(service.name)}%20service%20for%20${encodeURIComponent(model.name)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-red-900 text-white rounded-md px-3 py-1.5 sm:px-2 sm:py-1 text-sm sm:text-base font-medium hover:bg-red-950 inline-block whitespace-nowrap"
                 >
-                  Add +
-                </button>
+                  Book Now
+                </a>
               </div>
             </div>
           ))}

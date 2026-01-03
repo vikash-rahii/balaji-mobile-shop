@@ -1,16 +1,11 @@
 import React, { useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { mobiles, SAMPLE_CHARGERS, SAMPLE_HEADPHONES, mobileCovers } from "../assets/assets";
-import { FaShoppingCart, FaStar } from "react-icons/fa";
-import { CiHeart } from "react-icons/ci";
-import { useCart } from '../context/CartContext';
-import Toast from '../components/Toast';
+import { FaStar } from "react-icons/fa";
 import ProductImage from '../components/ProductImage';
 import SEO from '../components/SEO';
 
 function AllProducts() {
-  const { addToCart } = useCart();
-  const [toast, setToast] = useState(null);
   const [searchParams] = useSearchParams();
   const categoryFilter = searchParams.get('category') || 'All';
 
@@ -94,7 +89,6 @@ else if (sortBy === "rating") {
       description={getPageDescription()}
       keywords={`mobile phones ekma, smartphone sales saran, mobile accessories bihar, phone chargers, headphones, mobile covers, ${categoryFilter !== 'All' ? categoryFilter.toLowerCase() + ' ekma' : 'mobile products ekma'}`}
     />
-      {toast && <Toast message={toast} onClose={() => setToast(null)} />}
     <div className='min-h-screen bg-gradient-to-b from-slate-50 to bg-white px-4 py-8'>
       <div className='max-w-7xl mx-auto'>
         <header className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8'>
@@ -120,6 +114,27 @@ else if (sortBy === "rating") {
           </select>
           </div>
         </header>
+        {filtered.length === 0 ? (
+          <div className="text-center py-16">
+            <div className="max-w-md mx-auto">
+              <div className="text-6xl mb-4">🔍</div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">Product Not Found</h2>
+              <p className="text-gray-600 mb-6">
+                We couldn't find any products matching your search. Try adjusting your filters or search terms.
+              </p>
+              <button
+                onClick={() => {
+                  setQuery("");
+                  setBrandFilter("All");
+                  setSortBy("popularity");
+                }}
+                className="px-6 py-2 bg-red-900 text-white rounded-lg hover:bg-red-800 transition-colors"
+              >
+                Clear Filters
+              </button>
+            </div>
+          </div>
+        ) : (
         <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
           {
             filtered.map((p)=>(
@@ -165,40 +180,21 @@ else if (sortBy === "rating") {
                 </div>
                 {p.save && <p className='text-red-900 font-medium'>{p.save}</p>}
               </div>
-        <div className='flex w-full justify-between gap-4'>
+        <div className='flex w-full justify-center'>
                 <a
                   href={`https://wa.me/918873338001?text=Hi%20I%20want%20to%20order%20${encodeURIComponent(p.brand ? `${p.brand} ${p.model || p.name}` : p.name)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className='flex-1 py-2 rounded-lg text-white text-lg  flex items-center justify-center bg-gradient-to-r from-red-300 to-red-900 cursor-pointer hover:opacity-90 transition'
+                  className='w-full py-2 rounded-lg text-white text-lg flex items-center justify-center bg-gradient-to-r from-red-300 to-red-900 cursor-pointer hover:opacity-90 transition'
                 >
               Book Now
                 </a>
-                <button
-                  onClick={() => {
-                    addToCart({
-                      id: p.id,
-                      name: p.brand ? `${p.brand} ${p.model || p.name}` : p.name,
-                      brand: p.brand,
-                      model: p.model,
-                      price: p.price,
-                      img: p.img,
-                      type: p.type,
-                      features: p.features,
-                      rating: p.rating,
-                    });
-                    setToast('Product added to cart!');
-                  }}
-                  className='w-10 h-10 flex items-center cursor-pointer justify-center shadow-md rounded-full hover:bg-red-900 hover:text-white transition'
-                  title="Add to cart"
-                >
-                  <FaShoppingCart size={22}/>
-                </button>
               </div>
               </div>
             ))
           }
         </div>
+        )}
       </div>
     </div>
     </>

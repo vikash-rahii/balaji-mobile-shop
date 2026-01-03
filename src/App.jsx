@@ -10,11 +10,12 @@ import ModelDetails from './components/ModelDetails'
 import Repair from './pages/Repair'
 import AllProducts from './pages/AllProducts'
 import PhotoFrame from './pages/PhotoFrame'
-import Cart from './pages/Cart'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <>
+    <ScrollToTop />
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>}/>
@@ -25,7 +26,6 @@ function App() {
       <Route path='/repair/:brandName/:modelName' element={<ModelDetails/>}/>
       <Route path='/all' element={<AllProducts/>}/>
       <Route path='/photo-frame' element={<PhotoFrame/>}/>
-      <Route path='/cart' element={<Cart/>}/>
     </Routes>
     <Footer/>
     </>

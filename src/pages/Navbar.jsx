@@ -1,24 +1,24 @@
 import React, { useState } from "react";
-import { Phone, MapPin, Clock9, Menu, ShoppingCart } from "lucide-react";
+import { Phone, MapPin, Clock9, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import DropDown from "../components/DropDown";
-import { useCart } from "../context/CartContext";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const { getCartCount } = useCart();
-  const cartCount = getCartCount();
   return (
     <header className="w-full sticky top-0 z-50 shadow bg-white">
       <div className="bg-red-900 text-xs sm:text-sm text-gray-100 hidden sm:block overflow-x-hidden">
         <div className="relative w-full overflow-x-hidden">
           <div className="marquee-container flex items-center gap-8 sm:gap-12 md:gap-16 lg:gap-20">
-            <div className="flex items-center gap-2 whitespace-nowrap">
+            <a 
+              href="tel:+918873338001" 
+              className="flex items-center gap-2 whitespace-nowrap hover:text-yellow-200 transition-colors"
+            >
               <Phone className="text-gray-300 flex-shrink-0" size={16} />
               <span className="text-gray-300">+91 8873338001</span>
-            </div>
+            </a>
             <div className="flex items-center gap-2 whitespace-nowrap">
               <MapPin className="text-gray-300 flex-shrink-0" size={16} />
               <span className="text-gray-300">Block Road, Ekma, Saran, Bihar</span>
@@ -28,10 +28,13 @@ function Navbar() {
               <span className="text-gray-300">Open: 9:00 AM - 7:00 PM</span>
             </div>
             {/* Duplicate for seamless loop */}
-            <div className="flex items-center gap-2 whitespace-nowrap">
+            <a 
+              href="tel:+918873338001" 
+              className="flex items-center gap-2 whitespace-nowrap hover:text-yellow-200 transition-colors"
+            >
               <Phone className="text-gray-300 flex-shrink-0" size={16} />
               <span className="text-gray-300">+91 8873338001</span>
-            </div>
+            </a>
             <div className="flex items-center gap-2 whitespace-nowrap">
               <MapPin className="text-gray-300 flex-shrink-0" size={16} />
               <span className="text-gray-300">Block Road, Ekma, Saran, Bihar</span>
@@ -103,14 +106,6 @@ function Navbar() {
           </Link>
         </nav>
         <div className="flex items-center gap-4 flex-shrink-0">
-          <Link to="/cart" className="relative">
-            <ShoppingCart className="h-6 w-6 cursor-pointer hover:text-red-900" />
-            {cartCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-900 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                {cartCount > 9 ? '9+' : cartCount}
-              </span>
-            )}
-          </Link>
         </div>
         <div
           className="md:hidden p-2 rounded-lg hover:bg-gray-100"
@@ -202,14 +197,6 @@ function Navbar() {
             onClick={() => setIsOpen(false)}
           >
             Contact
-          </Link>
-          <Link 
-            to="/cart" 
-            className="flex items-center gap-2 py-2"
-            onClick={() => setIsOpen(false)}
-          >
-            <ShoppingCart className="h-5 w-5" />
-            Cart {cartCount > 0 && `(${cartCount})`}
           </Link>
         </div>
       )}
