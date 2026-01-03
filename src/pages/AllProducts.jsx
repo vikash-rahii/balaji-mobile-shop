@@ -6,6 +6,7 @@ import { CiHeart } from "react-icons/ci";
 import { useCart } from '../context/CartContext';
 import Toast from '../components/Toast';
 import ProductImage from '../components/ProductImage';
+import SEO from '../components/SEO';
 
 function AllProducts() {
   const { addToCart } = useCart();
@@ -70,9 +71,29 @@ else if (sortBy === "rating") {
    return list;
   },[initialProducts,query,brandFilter,sortBy,categoryFilter])
 
+  const getPageTitle = () => {
+    if (categoryFilter === 'Mobile') return 'Mobile Phones for Sale - Latest Smartphones | Balazi Mobile Ekma';
+    if (categoryFilter === 'Charger') return 'Mobile Chargers - Fast Charging Cables & Adapters | Balazi Mobile';
+    if (categoryFilter === 'Headphone') return 'Headphones & Earphones - Wireless & Wired | Balazi Mobile';
+    if (categoryFilter === 'Mobile Cover') return 'Mobile Covers & Cases - Protection for All Phones | Balazi Mobile';
+    return 'All Products - Mobiles, Chargers, Headphones, Covers | Balazi Mobile Ekma';
+  };
+
+  const getPageDescription = () => {
+    if (categoryFilter === 'Mobile') return 'Buy latest smartphones from top brands: Apple iPhone, Samsung Galaxy, Vivo, Oppo, Redmi, OnePlus and more. Best prices in Ekma, Saran, Bihar.';
+    if (categoryFilter === 'Charger') return 'Buy genuine mobile chargers, fast charging cables, and adapters for all phone brands. Original chargers available at Balazi Mobile, Ekma.';
+    if (categoryFilter === 'Headphone') return 'Premium headphones and earphones: wireless, wired, noise-cancelling. Best audio accessories at affordable prices in Ekma, Bihar.';
+    if (categoryFilter === 'Mobile Cover') return 'Protect your phone with premium mobile covers and cases. Shockproof, transparent, and designer covers for all phone models.';
+    return 'Shop mobile phones, chargers, headphones, and mobile covers at Balazi Mobile, Ekma. Best deals on smartphones and accessories in Saran, Bihar.';
+  };
 
   return (
     <>
+    <SEO
+      title={getPageTitle()}
+      description={getPageDescription()}
+      keywords={`mobile phones ekma, smartphone sales saran, mobile accessories bihar, phone chargers, headphones, mobile covers, ${categoryFilter !== 'All' ? categoryFilter.toLowerCase() + ' ekma' : 'mobile products ekma'}`}
+    />
       {toast && <Toast message={toast} onClose={() => setToast(null)} />}
     <div className='min-h-screen bg-gradient-to-b from-slate-50 to bg-white px-4 py-8'>
       <div className='max-w-7xl mx-auto'>

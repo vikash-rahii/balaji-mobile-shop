@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: http://www.balajimobileshop.in/sitemap.xml
+
+# Disallow cart and admin pages if any
+Disallow: /cart
+Disallow: /*?category=*
+
+# Allow all important pages
+Allow: /
+Allow: /contact
+Allow: /services
+Allow: /repair
+Allow: /all
+Allow: /photo-frame
+

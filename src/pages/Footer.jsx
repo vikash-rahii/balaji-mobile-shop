@@ -13,6 +13,7 @@ import {
   FaInstagram,
   FaWhatsapp,
 } from "react-icons/fa";
+import logo from "../assets/logo.png";
 
 function Footer() {
   return (
@@ -22,7 +23,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/logo.png"
+                src={logo}
                 alt="Balazi Mobile Logo"
                 className="h-12 w-12 object-contain  rounded-full shadow-lg"
               />

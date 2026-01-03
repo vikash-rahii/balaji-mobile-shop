@@ -5,6 +5,7 @@ import { MdPhotoSizeSelectActual, MdPhotoLibrary } from "react-icons/md";
 import { HiSparkles } from "react-icons/hi";
 import { useCart } from "../context/CartContext";
 import Toast from "../components/Toast";
+import SEO from '../components/SEO';
 
 function PhotoFrame() {
   const [selectedFrame, setSelectedFrame] = useState(null);
@@ -111,6 +112,11 @@ function PhotoFrame() {
 
   return (
     <>
+    <SEO
+      title="Photo Framing Services - Custom Photo Frames | Balazi Mobile Ekma"
+      description="Professional photo framing services in Ekma, Saran, Bihar. Custom frames for all occasions - weddings, family photos, certificates. Premium quality framing at affordable prices."
+      keywords="photo framing ekma, custom photo frames saran, picture framing bihar, photo frame service, certificate framing, wedding photo frames"
+    />
       {toast && <Toast message={toast} onClose={() => setToast(null)} />}
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}

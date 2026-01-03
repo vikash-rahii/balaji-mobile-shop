@@ -1,9 +1,16 @@
 import React from 'react';
 import {repairServices} from '../assets/assets'
 import { CiClock2 } from 'react-icons/ci';
+import SEO from '../components/SEO';
 
 function Service() {
   return (
+    <>
+    <SEO
+      title="Mobile Repair Services - Screen, Battery, Camera Repair | Balazi Mobile Ekma"
+      description="Expert mobile phone repair services in Ekma: screen replacement, battery replacement, camera repair, charging issues, water damage repair, data recovery. Fast and reliable service."
+      keywords="mobile screen repair ekma, battery replacement saran, phone camera repair, charging port repair, water damage repair, data recovery service, mobile repair services bihar"
+    />
     <section id='services' className='relative min-h-screen bg-orange-50 flex
        overflow-hidden'>
 
@@ -89,6 +96,7 @@ function Service() {
     </div>
 
     </section>
+    </>
   )
 }
 

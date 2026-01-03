@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import ProductImage from "./ProductImage";
+import SEO from "./SEO";
 
 import {
   apple,
@@ -68,6 +69,12 @@ function BrandModels() {
   );
 
   return (
+    <>
+    <SEO
+      title={`${brandName.charAt(0).toUpperCase() + brandName.slice(1)} Phone Repair - All Models | Balazi Mobile Ekma`}
+      description={`Expert ${brandName} mobile phone repair services in Ekma, Saran, Bihar. Repair all ${brandName} models - screen replacement, battery, camera, charging port. Fast and reliable service.`}
+      keywords={`${brandName} repair ekma, ${brandName} phone service saran, ${brandName} mobile repair bihar, ${brandName} model repair`}
+    />
     <div className="container mx-auto px-6 py-12">
       <h3 className="text-3xl md:text-4xl text-red-900 font-bold mb-8 capitalize">
         {brandName} <span className="text-gray-800">Repair & Replacement</span>
@@ -140,6 +147,7 @@ function BrandModels() {
         </p>
       )}
     </div>
+    </>
   );
 }
 

@@ -2,9 +2,16 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { brands } from "../assets/assets.js";
 import ProductImage from "../components/ProductImage";
+import SEO from "../components/SEO";
 
 function Repair() {
   return (
+    <>
+    <SEO
+      title="Mobile Phone Repair by Brand - Apple, Samsung, Vivo, Oppo | Balazi Mobile Ekma"
+      description="Expert mobile phone repair services for all major brands: Apple iPhone, Samsung Galaxy, Vivo, Oppo, Redmi, OnePlus, and more. Fast repair service in Ekma, Saran, Bihar."
+      keywords="apple repair ekma, samsung repair saran, vivo phone repair, oppo service bihar, mobile brand repair, phone model repair ekma"
+    />
     <div className="min-h-screen bg-gray-50 flex flex-col items-center px-6 py-12">
       <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-10">
         Top <span className="text-red-900">Brands</span>

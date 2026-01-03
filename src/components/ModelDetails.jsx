@@ -10,6 +10,7 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { useCart } from "../context/CartContext";
 import Toast from "./Toast";
 import ProductImage from "./ProductImage";
+import SEO from "./SEO";
 import {
   apple,
   samsung,
@@ -92,6 +93,11 @@ function ModelDetails() {
   }
   return (
     <>
+    <SEO
+      title={`${model.name} Repair Services - Screen, Battery, Camera | Balazi Mobile Ekma`}
+      description={`Expert ${model.name} repair services in Ekma, Saran, Bihar. Screen replacement, battery replacement, camera repair, charging port, and more. Fast service with warranty.`}
+      keywords={`${model.name} repair ekma, ${model.name} screen replacement, ${model.name} battery repair, ${brandName} ${model.name} service`}
+    />
       {toast && <Toast message={toast} onClose={() => setToast(null)} />}
     <div className="min-h-screen bg-gray-50 px-6 md:px-12 py-10">
       <nav className="text-sm text-gray-500 mb-6">

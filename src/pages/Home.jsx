@@ -4,10 +4,16 @@ import { Link } from "react-router-dom";
 import { tools, workHistory } from "../assets/assets.js";
 import { ImInsertTemplate } from "react-icons/im";
 import Services from "../components/Services.jsx";
+import SEO from "../components/SEO";
 
 function Home() {
   return (
     <>
+    <SEO
+      title="Balazi Mobile - Mobile Phone Repair & Sales in Ekma, Saran, Bihar | Expert Services"
+      description="Balazi Mobile offers expert mobile phone repair services, latest smartphone sales, genuine accessories, and photo framing in Ekma, Saran, Bihar. Visit Block Road, Ekma. Call +91-8873338001"
+      keywords="mobile repair ekma, mobile shop saran bihar, phone repair service, smartphone sales ekma, mobile accessories, phone service near me, ekma mobile repair, saran mobile shop, bihar phone service"
+    />
     <section
       id="home"
       className="relative min-h-screen bg-red-900 flex
@@ -16,7 +22,7 @@ function Home() {
       <div className="absolute inset-0">
         <img
           src={hero}
-          alt="hero"
+          alt="Balazi Mobile - Mobile Phone Repair and Sales Shop in Ekma, Saran, Bihar"
           className="w-full h-full object-cover opacity-25"
         />
       </div>
