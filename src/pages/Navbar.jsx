@@ -123,30 +123,91 @@ function Navbar() {
       </div>
       {isOpen && (
         <div className="md:hidden bg-gray-50 px-6 py-4 space-y-3 border-t">
-          <Link to="/" className="block py-2">
+          <Link 
+            to="/" 
+            className="block py-2"
+            onClick={() => setIsOpen(false)}
+          >
             Home
           </Link>
           <details>
             <summary className="cursor-pointer py-2">Services</summary>
-            <Link to="/repair" className="block pl-4 py-1">
+            <Link 
+              to="/repair" 
+              className="block pl-4 py-1"
+              onClick={() => setIsOpen(false)}
+            >
               Mobile Repair
             </Link>
-            <Link to="/services" className="block pl-4 py-1">
+            <Link 
+              to="/services" 
+              className="block pl-4 py-1"
+              onClick={() => setIsOpen(false)}
+            >
               Our Services
             </Link>
           </details>
 
           <details>
             <summary className="cursor-pointer py-2">Products</summary>
-            <Link to="/all" className="block pl-4 py-1">
-              All Products
-            </Link>
+            <div className="max-h-48 overflow-y-auto">
+              <Link 
+                to="/all" 
+                className="block pl-4 py-1"
+                onClick={() => setIsOpen(false)}
+              >
+                All Products
+              </Link>
+              <Link 
+                to="/all?category=Mobile" 
+                className="block pl-4 py-1"
+                onClick={() => setIsOpen(false)}
+              >
+                Mobile Sales
+              </Link>
+              <Link 
+                to="/all?category=Charger" 
+                className="block pl-4 py-1"
+                onClick={() => setIsOpen(false)}
+              >
+                Charger Sales
+              </Link>
+              <Link 
+                to="/all?category=Headphone" 
+                className="block pl-4 py-1"
+                onClick={() => setIsOpen(false)}
+              >
+                Headphone Sales
+              </Link>
+              <Link 
+                to="/all?category=Mobile Cover" 
+                className="block pl-4 py-1"
+                onClick={() => setIsOpen(false)}
+              >
+                Mobile Cover
+              </Link>
+            </div>
           </details>
 
-          <Link to="/contact" className="block py-2">
+          <Link 
+            to="/photo-frame" 
+            className="block py-2"
+            onClick={() => setIsOpen(false)}
+          >
+            Photo Frame
+          </Link>
+          <Link 
+            to="/contact" 
+            className="block py-2"
+            onClick={() => setIsOpen(false)}
+          >
             Contact
           </Link>
-          <Link to="/cart" className="flex items-center gap-2 py-2">
+          <Link 
+            to="/cart" 
+            className="flex items-center gap-2 py-2"
+            onClick={() => setIsOpen(false)}
+          >
             <ShoppingCart className="h-5 w-5" />
             Cart {cartCount > 0 && `(${cartCount})`}
           </Link>

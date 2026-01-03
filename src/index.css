@@ -72,3 +72,39 @@
     transform: translateY(0);
   }
 }
+
+/* Custom scrollbar for dropdown */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(254 202 202) rgb(243 244 246);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgb(243 244 246);
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgb(254 202 202);
+  border-radius: 10px;
+}
+
+.scrollbar-thin:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(252 165 165);
+}
+
+.scrollbar-thumb-red-200::-webkit-scrollbar-thumb {
+  background-color: rgb(254 202 202);
+}
+
+.scrollbar-thumb-red-300:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(252 165 165);
+}
+
+.scrollbar-track-gray-100::-webkit-scrollbar-track {
+  background: rgb(243 244 246);
+}
