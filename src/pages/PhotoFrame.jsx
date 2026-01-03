@@ -109,7 +109,7 @@ function PhotoFrame() {
   return (
     <>
     <SEO
-      title="Photo Framing Services - Custom Photo Frames | Balazi Mobile Ekma"
+      title="Photo Framing Services - Custom Photo Frames | Balaji Mobile Ekma"
       description="Professional photo framing services in Ekma, Saran, Bihar. Custom frames for all occasions - weddings, family photos, certificates. Premium quality framing at affordable prices."
       keywords="photo framing ekma, custom photo frames saran, picture framing bihar, photo frame service, certificate framing, wedding photo frames"
     />

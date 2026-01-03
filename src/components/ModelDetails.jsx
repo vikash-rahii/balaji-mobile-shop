@@ -90,7 +90,7 @@ function ModelDetails() {
   return (
     <>
     <SEO
-      title={`${model.name} Repair Services - Screen, Battery, Camera | Balazi Mobile Ekma`}
+      title={`${model.name} Repair Services - Screen, Battery, Camera | Balaji Mobile Ekma`}
       description={`Expert ${model.name} repair services in Ekma, Saran, Bihar. Screen replacement, battery replacement, camera repair, charging port, and more. Fast service with warranty.`}
       keywords={`${model.name} repair ekma, ${model.name} screen replacement, ${model.name} battery repair, ${brandName} ${model.name} service`}
     />

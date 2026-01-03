@@ -8,7 +8,7 @@ function Repair() {
   return (
     <>
     <SEO
-      title="Mobile Phone Repair by Brand - Apple, Samsung, Vivo, Oppo | Balazi Mobile Ekma"
+      title="Mobile Phone Repair by Brand - Apple, Samsung, Vivo, Oppo | Balaji Mobile Ekma"
       description="Expert mobile phone repair services for all major brands: Apple iPhone, Samsung Galaxy, Vivo, Oppo, Redmi, OnePlus, and more. Fast repair service in Ekma, Saran, Bihar."
       keywords="apple repair ekma, samsung repair saran, vivo phone repair, oppo service bihar, mobile brand repair, phone model repair ekma"
     />

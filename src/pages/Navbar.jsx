@@ -55,7 +55,7 @@ function Navbar() {
             />
             <div>
               <h1 className="text-lg sm:text-2xl font-bold tracking-tight">
-                Balazi<span className="text-red-900">Mobile</span>
+                Balaji<span className="text-red-900">Mobile</span>
               </h1>
               <p className="text-xs sm:text-sm text-gray-600">Sales & Repair</p>
             </div>

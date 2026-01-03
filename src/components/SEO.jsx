@@ -18,7 +18,7 @@ function SEO({
 
   useEffect(() => {
     // Update document title
-    document.title = title || 'Balazi Mobile - Sales & Repair | Mobile Phone Services';
+    document.title = title || 'Balaji Mobile - Sales & Repair | Mobile Phone Services';
 
     // Update or create meta tags
     const updateMetaTag = (name, content, isProperty = false) => {
@@ -45,16 +45,16 @@ function SEO({
     }
 
     // Open Graph tags
-    updateMetaTag('og:title', title || 'Balazi Mobile - Sales & Repair', true);
+    updateMetaTag('og:title', title || 'Balaji Mobile - Sales & Repair', true);
     updateMetaTag('og:type', type, true);
     updateMetaTag('og:url', currentUrl, true);
     updateMetaTag('og:image', finalImage, true);
-    updateMetaTag('og:site_name', 'Balazi Mobile', true);
+    updateMetaTag('og:site_name', 'Balaji Mobile', true);
     updateMetaTag('og:locale', 'en_IN', true);
 
     // Twitter Card tags
     updateMetaTag('twitter:card', 'summary_large_image');
-    updateMetaTag('twitter:title', title || 'Balazi Mobile - Sales & Repair');
+    updateMetaTag('twitter:title', title || 'Balaji Mobile - Sales & Repair');
     updateMetaTag('twitter:image', finalImage);
 
     // Canonical URL
@@ -70,7 +70,7 @@ function SEO({
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Balazi Mobile",
+      "name": "Balaji Mobile",
       "image": defaultImage,
       "@id": siteUrl,
       "url": siteUrl,

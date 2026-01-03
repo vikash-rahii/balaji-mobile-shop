@@ -1,4 +1,4 @@
-# SEO Optimization Guide for Balazi Mobile
+# SEO Optimization Guide for Balaji Mobile
 
 This document outlines all SEO optimizations implemented for better search engine visibility and local traffic.
 
@@ -78,7 +78,7 @@ Before deploying, update these files with your actual domain:
 
 ### 2. Google Business Profile
 1. Create/claim your Google Business Profile
-2. Add business name: "Balazi Mobile"
+2. Add business name: "Balaji Mobile"
 3. Add address: Block Road, Ekma, Saran, Bihar - 841208
 4. Add phone: +91-8873338001
 5. Add business hours

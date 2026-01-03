@@ -71,7 +71,7 @@ function BrandModels() {
   return (
     <>
     <SEO
-      title={`${brandName.charAt(0).toUpperCase() + brandName.slice(1)} Phone Repair - All Models | Balazi Mobile Ekma`}
+      title={`${brandName.charAt(0).toUpperCase() + brandName.slice(1)} Phone Repair - All Models | Balaji Mobile Ekma`}
       description={`Expert ${brandName} mobile phone repair services in Ekma, Saran, Bihar. Repair all ${brandName} models - screen replacement, battery, camera, charging port. Fast and reliable service.`}
       keywords={`${brandName} repair ekma, ${brandName} phone service saran, ${brandName} mobile repair bihar, ${brandName} model repair`}
     />

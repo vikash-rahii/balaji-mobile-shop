@@ -7,7 +7,7 @@ function Service() {
   return (
     <>
     <SEO
-      title="Mobile Repair Services - Screen, Battery, Camera Repair | Balazi Mobile Ekma"
+      title="Mobile Repair Services - Screen, Battery, Camera Repair | Balaji Mobile Ekma"
       description="Expert mobile phone repair services in Ekma: screen replacement, battery replacement, camera repair, charging issues, water damage repair, data recovery. Fast and reliable service."
       keywords="mobile screen repair ekma, battery replacement saran, phone camera repair, charging port repair, water damage repair, data recovery service, mobile repair services bihar"
     />

@@ -67,19 +67,19 @@ else if (sortBy === "rating") {
   },[initialProducts,query,brandFilter,sortBy,categoryFilter])
 
   const getPageTitle = () => {
-    if (categoryFilter === 'Mobile') return 'Mobile Phones for Sale - Latest Smartphones | Balazi Mobile Ekma';
-    if (categoryFilter === 'Charger') return 'Mobile Chargers - Fast Charging Cables & Adapters | Balazi Mobile';
-    if (categoryFilter === 'Headphone') return 'Headphones & Earphones - Wireless & Wired | Balazi Mobile';
-    if (categoryFilter === 'Mobile Cover') return 'Mobile Covers & Cases - Protection for All Phones | Balazi Mobile';
-    return 'All Products - Mobiles, Chargers, Headphones, Covers | Balazi Mobile Ekma';
+    if (categoryFilter === 'Mobile') return 'Mobile Phones for Sale - Latest Smartphones | Balaji Mobile Ekma';
+    if (categoryFilter === 'Charger') return 'Mobile Chargers - Fast Charging Cables & Adapters | Balaji Mobile';
+    if (categoryFilter === 'Headphone') return 'Headphones & Earphones - Wireless & Wired | Balaji Mobile';
+    if (categoryFilter === 'Mobile Cover') return 'Mobile Covers & Cases - Protection for All Phones | Balaji Mobile';
+    return 'All Products - Mobiles, Chargers, Headphones, Covers | Balaji Mobile Ekma';
   };
 
   const getPageDescription = () => {
     if (categoryFilter === 'Mobile') return 'Buy latest smartphones from top brands: Apple iPhone, Samsung Galaxy, Vivo, Oppo, Redmi, OnePlus and more. Best prices in Ekma, Saran, Bihar.';
-    if (categoryFilter === 'Charger') return 'Buy genuine mobile chargers, fast charging cables, and adapters for all phone brands. Original chargers available at Balazi Mobile, Ekma.';
+    if (categoryFilter === 'Charger') return 'Buy genuine mobile chargers, fast charging cables, and adapters for all phone brands. Original chargers available at Balaji Mobile, Ekma.';
     if (categoryFilter === 'Headphone') return 'Premium headphones and earphones: wireless, wired, noise-cancelling. Best audio accessories at affordable prices in Ekma, Bihar.';
     if (categoryFilter === 'Mobile Cover') return 'Protect your phone with premium mobile covers and cases. Shockproof, transparent, and designer covers for all phone models.';
-    return 'Shop mobile phones, chargers, headphones, and mobile covers at Balazi Mobile, Ekma. Best deals on smartphones and accessories in Saran, Bihar.';
+    return 'Shop mobile phones, chargers, headphones, and mobile covers at Balaji Mobile, Ekma. Best deals on smartphones and accessories in Saran, Bihar.';
   };
 
   return (

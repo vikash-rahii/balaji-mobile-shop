@@ -10,8 +10,8 @@ function Home() {
   return (
     <>
     <SEO
-      title="Balazi Mobile - Mobile Phone Repair & Sales in Ekma, Saran, Bihar | Expert Services"
-      description="Balazi Mobile offers expert mobile phone repair services, latest smartphone sales, genuine accessories, and photo framing in Ekma, Saran, Bihar. Visit Block Road, Ekma. Call +91-8873338001"
+      title="Balaji Mobile - Mobile Phone Repair & Sales in Ekma, Saran, Bihar | Expert Services"
+      description="Balaji Mobile offers expert mobile phone repair services, latest smartphone sales, genuine accessories, and photo framing in Ekma, Saran, Bihar. Visit Block Road, Ekma. Call +91-8873338001"
       keywords="mobile repair ekma, mobile shop saran bihar, phone repair service, smartphone sales ekma, mobile accessories, phone service near me, ekma mobile repair, saran mobile shop, bihar phone service"
     />
     
@@ -23,7 +23,7 @@ function Home() {
       <div className="absolute inset-0">
         <img
           src={hero}
-          alt="Balazi Mobile - Mobile Phone Repair and Sales Shop in Ekma, Saran, Bihar"
+          alt="Balaji Mobile - Mobile Phone Repair and Sales Shop in Ekma, Saran, Bihar"
           className="w-full h-full object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/90 via-red-800/80 to-red-900/90"></div>

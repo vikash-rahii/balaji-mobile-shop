@@ -1,6 +1,6 @@
 # Deployment Guide for GitHub Pages with Custom Domain
 
-This guide will help you deploy your Balazi Mobile website to GitHub Pages with a custom domain.
+This guide will help you deploy your Balaji Mobile website to GitHub Pages with a custom domain.
 
 ## Prerequisites
 - GitHub account

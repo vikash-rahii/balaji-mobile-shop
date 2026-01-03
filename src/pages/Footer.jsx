@@ -24,7 +24,7 @@ function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <img
                 src={logo}
-                alt="Balazi Mobile Logo"
+                alt="Balaji Mobile Logo"
                 className="h-12 w-12 object-contain  rounded-full shadow-lg"
               />
               <div className="leading-tight flex flex-col">

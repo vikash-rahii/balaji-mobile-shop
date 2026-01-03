@@ -13,7 +13,7 @@ All domain references have been updated to `http://www.balajimobileshop.in/`:
 
 ### 2. Google Business Profile (CRITICAL for Local SEO)
 - [ ] Create/claim Google Business Profile
-- [ ] Business Name: Balazi Mobile
+- [ ] Business Name: Balaji Mobile
 - [ ] Address: Block Road, Ekma, Saran, Bihar - 841208
 - [ ] Phone: +91-8873338001
 - [ ] Category: Mobile Phone Repair Service / Electronics Store

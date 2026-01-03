@@ -39,8 +39,8 @@ function Contact() {
   return (
     <>
     <SEO
-      title="Contact Us - Balazi Mobile | Visit Our Store in Ekma, Saran, Bihar"
-      description="Contact Balazi Mobile for mobile phone repair and sales. Visit us at Block Road, Ekma, Saran, Bihar - Pin 841208. Call +91-8873338001 or WhatsApp us. Open 9 AM - 7 PM"
+      title="Contact Us - Balaji Mobile | Visit Our Store in Ekma, Saran, Bihar"
+      description="Contact Balaji Mobile for mobile phone repair and sales. Visit us at Block Road, Ekma, Saran, Bihar - Pin 841208. Call +91-8873338001 or WhatsApp us. Open 9 AM - 7 PM"
       keywords="contact balazi mobile, mobile shop ekma address, phone repair shop saran, visit mobile store bihar, ekma mobile contact"
     />
       <section className="py-20 bg-gray-50 w-full h-full">
